@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+
+{% block title %}Applications - White Rose — The Energy Tree{% endblock %}
+{% block description %}Discover the versatile applications of White Rose energy trees: parks, campuses, residential areas, mobile and modular installations with shade and seating options.{% endblock %}
+
+{% block extra_head %}
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out both;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="section bg-soft">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-ink mb-6 animate-fade-in">Applications</h1>
+        <p class="text-xl text-ink leading-relaxed animate-slide-up delay-200">
+            White Rose energy trees are designed for versatility and adaptability, bringing sustainable energy solutions to parks, campuses, residential areas, and urban spaces. Our mobile and modular design allows for flexible deployment with integrated shade and seating options.
+        </p>
+    </div>
+</section>
+
+<!-- Application Scenarios -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Parks -->
+            <div class="bg-paper rounded-xl shadow-lg overflow-hidden border border-soft">
+                <div class="h-48 bg-mint flex items-center justify-center">
+                    <svg class="w-16 h-16 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-ink mb-3">Public Parks</h3>
+                    <p class="text-ink mb-4">Perfect for illuminating pathways, providing charging stations for visitors, and creating gathering spaces while maintaining the natural park environment.</p>
+                    <ul class="text-sm text-ink space-y-1">
+                        <li>• Pathway lighting</li>
+                        <li>• Visitor charging stations</li>
+                        <li>• Natural integration</li>
+                        <li>• Wildlife-friendly design</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Campuses -->
+            <div class="bg-paper rounded-xl shadow-lg overflow-hidden border border-soft">
+                <div class="h-48 bg-mint flex items-center justify-center">
+                    <svg class="w-16 h-16 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-ink mb-3">Campuses & City Squares</h3>
+                    <p class="text-ink mb-4">Transform educational and urban gathering spaces with artistic energy solutions that serve both functional and aesthetic purposes.</p>
+                    <ul class="text-sm text-ink space-y-1">
+                        <li>• Student gathering areas</li>
+                        <li>• Outdoor study spaces</li>
+                        <li>• Event lighting</li>
+                        <li>• Digital connectivity hubs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Residential -->
+            <div class="bg-paper rounded-xl shadow-lg overflow-hidden border border-soft">
+                <div class="h-48 bg-mint flex items-center justify-center">
+                    <svg class="w-16 h-16 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-ink mb-3">Residential Complexes</h3>
+                    <p class="text-ink mb-4">Create sustainable community spaces with smart lighting and mobile device charging capabilities for residents and visitors.</p>
+                    <ul class="text-sm text-ink space-y-1">
+                        <li>• Community gardens</li>
+                        <li>• Playground lighting</li>
+                        <li>• Resident charging areas</li>
+                        <li>• Common space enhancement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section bg-mint">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Key Features</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-2">Mobile & Modular</h3>
+                <p class="text-ink text-sm">Easy to relocate and reconfigure based on changing needs</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-2">Shade Provision</h3>
+                <p class="text-ink text-sm">Solar panel leaves provide natural cooling and comfortable spaces</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-2">Seating Integration</h3>
+                <p class="text-ink text-sm">Built-in seating options for community gathering and relaxation</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-2">Smart Connectivity</h3>
+                <p class="text-ink text-sm">Charging stations and optional Wi-Fi connectivity for modern needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Implementation Examples -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Implementation Scenarios</h2>
+        </div>
+        
+        <div class="space-y-12">
+            <!-- Scenario 1 -->
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-ink mb-4">Urban Park Transformation</h3>
+                    <p class="text-ink mb-6">
+                        Installing White Rose trees along walking paths creates a network of sustainable lighting that operates independently of the city grid. Visitors can charge their devices while enjoying shaded seating areas, making parks more accessible and functional during evening hours.
+                    </p>
+                    <ul class="space-y-2 text-ink">
+                        <li>• Automated evening illumination (19:00-00:00)</li>
+                        <li>• Morning safety lighting (05:00-07:00)</li>
+                        <li>• Weather-resistant design</li>
+                        <li>• Minimal ground disruption during installation</li>
+                    </ul>
+                </div>
+                <div class="mt-8 lg:mt-0">
+                    <div class="bg-soft rounded-xl p-8 text-center">
+                        <div class="text-6xl mb-4">🌳</div>
+                        <p class="text-ink">Park Installation Visualization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario 2 -->
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-soft rounded-xl p-8 text-center">
+                        <div class="text-6xl mb-4">🏢</div>
+                        <p class="text-ink">Campus Integration Concept</p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-2xl font-semibold text-ink mb-4">Campus Integration</h3>
+                    <p class="text-ink mb-6">
+                        Universities and corporate campuses benefit from strategically placed energy trees that support outdoor studying, events, and social gatherings. The modular design allows for seasonal reconfiguration based on campus activities and needs.
+                    </p>
+                    <ul class="space-y-2 text-ink">
+                        <li>• Flexible placement for events</li>
+                        <li>• Student device charging hubs</li>
+                        <li>• Outdoor classroom support</li>
+                        <li>• Sustainable campus initiatives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section bg-gradient-to-r from-leaf to-teal">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-paper mb-6">Ready to transform your space?</h2>
+        <p class="text-xl text-paper/90 mb-8">Discover how White Rose can bring sustainable energy to your community</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'contact' %}" class="btn">Start Your Project</a>
+            <a href="{% url 'partners' %}" class="btn-outline bg-transparent text-paper border-paper hover:bg-paper hover:text-teal">Explore Partnerships</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

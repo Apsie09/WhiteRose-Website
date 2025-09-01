@@ -1,0 +1,81 @@
+<footer class="bg-soft text-ink border-t border-mint">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8 xl:col-span-1">
+                <div>
+                    <h3 class="text-2xl font-bold text-ink">White Rose</h3>
+                    <p class="text-teal text-sm mt-2 font-medium">The Energy Tree</p>
+                </div>
+                <p class="text-ink/80 text-base max-w-md">
+                    A cutting-edge, sustainable and socially impactful system that integrates solar 'leaves', vertical-axis wind turbines and smart storage.
+                </p>
+                <div class="flex space-x-6">
+                    <!-- Social media links placeholder -->
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-leaf tracking-wider uppercase">
+                            Navigation
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li><a href="{% url 'home' %}" class="text-base text-ink/80 hover:text-ink transition">Home</a></li>
+                            <li><a href="{% url 'technology' %}" class="text-base text-ink/80 hover:text-ink transition">Technology</a></li>
+                            <li><a href="{% url 'applications' %}" class="text-base text-ink/80 hover:text-ink transition">Applications</a></li>
+                            <li><a href="{% url 'partners' %}" class="text-base text-ink/80 hover:text-ink transition">Partners</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-sm font-semibold text-leaf tracking-wider uppercase">
+                            Company
+                        </h3>
+                        <ul class="mt-4 space-y-4">
+                            <li><a href="{% url 'about' %}" class="text-base text-ink/80 hover:text-ink transition">About</a></li>
+                            <li><a href="{% url 'contact' %}" class="text-base text-ink/80 hover:text-ink transition">Contact</a></li>
+                            <li><a href="{% url 'privacy' %}" class="text-base text-ink/80 hover:text-ink transition">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-1 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-leaf tracking-wider uppercase">
+                            Contact Information
+                        </h3>
+                        <div class="mt-4 space-y-4">
+                            <div>
+                                <p class="text-base text-teal font-medium">Email:</p>
+                                <div class="space-y-1">
+                                    <p><a href="mailto:mmustafa@tu-sofia.bg" class="text-ink/80 hover:text-ink transition">mmustafa@tu-sofia.bg</a></p>
+                                    <p><a href="mailto:asepopov@tu-sofia.bg" class="text-ink/80 hover:text-ink transition">asepopov@tu-sofia.bg</a></p>
+                                    <p><a href="mailto:petivanov@tu-sofia.bg" class="text-ink/80 hover:text-ink transition">petivanov@tu-sofia.bg</a></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-base text-teal font-medium">Address:</p>
+                                <p class="text-ink/80">
+                                    Technical University of Sofia<br>
+                                    8 Kliment Ohridski Blvd<br>
+                                    1000 Sofia, Bulgaria
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 border-t border-mint pt-8">
+            <p class="text-base text-ink/60 text-center">
+                &copy; {{ current_year }} White Rose — The Energy Tree. Technical University of Sofia.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Add current year to footer
+document.addEventListener('DOMContentLoaded', function() {
+    const currentYear = new Date().getFullYear();
+    document.querySelector('footer').innerHTML = document.querySelector('footer').innerHTML.replace('{{ current_year }}', currentYear);
+});
+</script>

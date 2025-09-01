@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+
+{% block title %}About - White Rose — The Energy Tree{% endblock %}
+{% block description %}Meet the White Rose team from Technical University of Sofia: Asen Popov, Melis Mustafa, and Miroslav Kotlarov. Learn about our mission to create autonomous energy zones and harmony between nature and technology.{% endblock %}
+
+{% block extra_head %}
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out both;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="section bg-soft">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-ink mb-6 animate-fade-in">About White Rose</h1>
+        <p class="text-xl text-ink leading-relaxed animate-slide-up delay-200">
+            We are a dedicated team from the Technical University of Sofia, committed to developing innovative solutions that create harmony between nature and technology while establishing autonomous energy zones for sustainable urban living.
+        </p>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-ink mb-6">Our Mission</h2>
+                <div class="space-y-4 text-ink">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 bg-leaf rounded-full flex items-center justify-center mr-3 mt-1">
+                            <svg class="w-3 h-3 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p>Create autonomous energy zones that operate independently of traditional power grids</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 bg-leaf rounded-full flex items-center justify-center mr-3 mt-1">
+                            <svg class="w-3 h-3 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p>Foster harmony between nature and technology through biomimetic design</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 bg-leaf rounded-full flex items-center justify-center mr-3 mt-1">
+                            <svg class="w-3 h-3 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p>Develop sustainable urban infrastructure that enhances community spaces</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 bg-leaf rounded-full flex items-center justify-center mr-3 mt-1">
+                            <svg class="w-3 h-3 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <p>Promote circular economy principles through component recycling and reuse</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-mint rounded-2xl p-8">
+                    <h3 class="text-2xl font-semibold text-ink mb-4">Our Vision</h3>
+                    <p class="text-ink text-lg leading-relaxed">
+                        To transform urban landscapes into self-sustaining ecosystems where renewable energy generation seamlessly integrates with natural aesthetics, creating spaces that serve both environmental and community needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="section bg-mint">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Our Team</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto">
+                Meet the passionate team behind White Rose — The Energy Tree, bringing together expertise in research, documentation, and technical implementation.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Asen Popov -->
+            <div class="bg-paper rounded-xl shadow-lg overflow-hidden border border-soft">
+                <div class="h-48 bg-gradient-to-br from-teal to-leaf flex items-center justify-center">
+                    <div class="w-24 h-24 bg-paper rounded-full flex items-center justify-center">
+                        <span class="text-2xl font-bold text-teal">AP</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-ink mb-2">Asen Popov</h3>
+                    <p class="text-teal font-medium mb-3">Research & Analysis</p>
+                    <p class="text-ink text-sm leading-relaxed mb-4">
+                        Specializes in sustainable energy systems research, market analysis, and technology assessment. Leads the strategic development and feasibility studies for White Rose implementations.
+                    </p>
+                    <p class="text-ink text-sm">
+                        <a href="mailto:asepopov@tu-sofia.bg" class="text-teal hover:text-leaf transition">asepopov@tu-sofia.bg</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Melis Mustafa -->
+            <div class="bg-paper rounded-xl shadow-lg overflow-hidden border border-soft">
+                <div class="h-48 bg-gradient-to-br from-teal to-leaf flex items-center justify-center">
+                    <div class="w-24 h-24 bg-paper rounded-full flex items-center justify-center">
+                        <span class="text-2xl font-bold text-teal">MM</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-ink mb-2">Melis Mustafa</h3>
+                    <p class="text-teal font-medium mb-3">Documentation & Visualization</p>
+                    <p class="text-ink text-sm leading-relaxed mb-4">
+                        Manages project documentation, creates technical visualizations, and develops communication materials. Ensures clear presentation of complex technical concepts.
+                    </p>
+                    <p class="text-ink text-sm">
+                        <a href="mailto:mmustafa@tu-sofia.bg" class="text-teal hover:text-leaf transition">mmustafa@tu-sofia.bg</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Petar Ivanov -->
+            <div class="bg-paper rounded-xl shadow-lg overflow-hidden border border-soft">
+                <div class="h-48 bg-gradient-to-br from-teal to-leaf flex items-center justify-center">
+                    <div class="w-24 h-24 bg-paper rounded-full flex items-center justify-center">
+                        <span class="text-2xl font-bold text-teal">PI</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-ink mb-2">Petar Ivanov</h3>
+                    <p class="text-teal font-medium mb-3">Technical Specs & Calculations</p>
+                    <p class="text-ink text-sm leading-relaxed mb-4">
+                        Handles technical specifications, engineering calculations, and system optimization. Ensures the technical feasibility and performance of White Rose designs.
+                    </p>
+                    <p class="text-ink text-sm">
+                        <a href="mailto:petivanov@tu-sofia.bg" class="text-teal hover:text-leaf transition">petivanov@tu-sofia.bg</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TU Sofia Affiliation -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-ink mb-6">Technical University of Sofia</h2>
+                <p class="text-ink text-lg leading-relaxed mb-6">
+                    Our project is proudly affiliated with the Technical University of Sofia, one of Bulgaria's leading institutions for engineering and technology education. This partnership provides us with access to world-class research facilities, academic expertise, and a collaborative environment that fosters innovation.
+                </p>
+                <div class="space-y-3 text-ink">
+                    <p>• Access to cutting-edge research facilities</p>
+                    <p>• Collaboration with academic experts</p>
+                    <p>• Support for sustainable technology development</p>
+                    <p>• Connection to international research networks</p>
+                </div>
+            </div>
+            <div>
+                <div class="bg-soft rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-leaf to-teal rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-ink mb-3">Academic Excellence</h3>
+                    <p class="text-ink">Established 1945 • Engineering & Technology Focus • International Recognition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="section bg-gradient-to-r from-leaf to-teal">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-paper mb-6">Our Values</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-paper mb-4">Sustainability</h3>
+                <p class="text-paper/90">Committed to environmental responsibility and circular economy principles in every aspect of our work.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-paper mb-4">Innovation</h3>
+                <p class="text-paper/90">Continuously pushing boundaries to develop cutting-edge solutions that address real-world challenges.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-paper mb-4">Community</h3>
+                <p class="text-paper/90">Building solutions that bring people together while serving environmental and social needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section bg-leaf">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-paper mb-6">Join our mission</h2>
+        <p class="text-xl text-mint mb-8">Ready to create autonomous energy zones and sustainable urban spaces together?</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'contact' %}" class="btn bg-paper text-leaf hover:bg-soft">Get in Touch</a>
+            <a href="{% url 'partners' %}" class="btn-outline border-paper text-paper hover:bg-paper hover:text-leaf">Explore Partnerships</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,522 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out both;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-paper via-soft to-paper">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <!-- Logo -->
+        <div class="mb-12">
+            <img src="{% static 'img/logo.svg' %}" alt="White Rose Logo" class="h-40 w-auto mx-auto animate-fade-in">
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-bold text-ink mb-8 animate-slide-up">
+            White Rose
+        </h1>
+        <p class="text-2xl md:text-3xl text-teal font-light mb-8 animate-slide-up delay-200">
+            The Energy Tree
+        </p>
+        <p class="text-xl text-ink max-w-4xl mx-auto mb-16 leading-relaxed animate-slide-up delay-400">
+            A cutting-edge, sustainable and socially impactful system that integrates solar 'leaves', 
+            vertical-axis wind turbines and smart storage to power lighting, charging and small devices—independent of the grid.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up delay-600">
+            <a href="{% url 'contact' %}" class="btn text-lg px-8 py-4">Contact us</a>
+            <a href="/static/docs/White rose resume EN.pdf" target="_blank" class="btn-outline text-lg px-8 py-4">Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<!-- What We Do Section -->
+<section class="py-24 bg-paper">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-ink mb-6">What We Do</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto leading-relaxed">
+                Creating sustainable energy solutions that transform urban landscapes
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="feature-card">
+                <div class="w-20 h-20 bg-gradient-to-r from-leaf to-teal rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.392 2.46a1 1 0 00-.364 1.118l1.286 3.97c.3.921-.755 1.688-1.54 1.118l-3.392-2.46a1 1 0 00-1.176 0l-3.392 2.46c-.784.57-1.838-.197-1.539-1.118l1.286-3.97a1 1 0 00-.364-1.118L2.464 9.397c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.97z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-ink mb-4 text-center">Solar Integration</h3>
+                <p class="text-ink text-center leading-relaxed">Advanced solar 'leaves' that harness sunlight with maximum efficiency and aesthetic appeal.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="w-20 h-20 bg-gradient-to-r from-teal to-ink rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-ink mb-4 text-center">Wind Power</h3>
+                <p class="text-ink text-center leading-relaxed">Vertical-axis wind turbines that capture wind energy from multiple directions efficiently.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="w-20 h-20 bg-gradient-to-r from-ink to-leaf rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-ink mb-4 text-center">Smart Storage</h3>
+                <p class="text-ink text-center leading-relaxed">Intelligent energy storage systems that optimize power distribution and availability.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Applications Section -->
+<section class="py-24 bg-gradient-to-b from-soft to-mint">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-ink mb-6">Applications</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto leading-relaxed">
+                Versatile solutions for diverse urban environments
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="bg-paper rounded-3xl p-10 text-center shadow-xl border border-mint hover:border-teal transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-br from-leaf to-teal rounded-3xl mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                        <path fill-rule="evenodd" d="M3 8a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-ink mb-6">Public Parks</h3>
+                <p class="text-ink leading-relaxed">Illuminate pathways and provide charging stations for visitors while enhancing the natural environment.</p>
+            </div>
+            
+            <div class="bg-paper rounded-3xl p-10 text-center shadow-xl border border-mint hover:border-teal transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-br from-teal to-ink rounded-3xl mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-ink mb-6">Residential Complexes</h3>
+                <p class="text-ink leading-relaxed">Create sustainable community spaces with smart lighting and mobile device charging capabilities.</p>
+            </div>
+            
+            <div class="bg-paper rounded-3xl p-10 text-center shadow-xl border border-mint hover:border-teal transition-all duration-300">
+                <div class="w-24 h-24 bg-gradient-to-br from-ink to-leaf rounded-3xl mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 5a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-ink mb-6">City Squares & Campuses</h3>
+                <p class="text-ink leading-relaxed">Transform urban gathering spaces with artistic energy solutions that serve functional and aesthetic purposes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="py-24 bg-paper">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-ink mb-6">Impact & Sustainability</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto leading-relaxed">
+                Measurable environmental and social benefits
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-4 gap-8 mb-16">
+            <div class="text-center">
+                <div class="w-28 h-28 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span class="text-3xl font-bold text-white">100%</span>
+                </div>
+                <h3 class="text-xl font-bold text-ink mb-3">Renewable Energy</h3>
+                <p class="text-ink">Completely sustainable power generation</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-28 h-28 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span class="text-3xl font-bold text-white">Zero</span>
+                </div>
+                <h3 class="text-xl font-bold text-ink mb-3">Grid Dependency</h3>
+                <p class="text-ink">Self-sufficient energy systems</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-28 h-28 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span class="text-3xl font-bold text-white">Low</span>
+                </div>
+                <h3 class="text-xl font-bold text-ink mb-3">Maintenance</h3>
+                <p class="text-ink">Minimal upkeep requirements</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-28 h-28 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span class="text-3xl font-bold text-white">High</span>
+                </div>
+                <h3 class="text-xl font-bold text-ink mb-3">Impact</h3>
+                <p class="text-ink">Significant environmental benefits</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="py-24 bg-gradient-to-r from-leaf to-teal">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-paper mb-8">Start to create it with us</h2>
+        <p class="text-xl text-paper/90 mb-12 leading-relaxed">
+            Ready to bring sustainable energy solutions to your community?
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="{% url 'contact' %}" class="bg-paper text-teal hover:bg-soft px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 shadow-lg">
+                Get in Touch
+            </a>
+            <a href="{% url 'partners' %}" class="border-2 border-paper text-paper hover:bg-paper hover:text-teal px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg">
+                View Our Partners
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values Section -->
+<section class="section bg-paper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Why White Rose?</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto">Transforming urban spaces with sustainable energy solutions</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Reduce carbon footprint</h3>
+                <p class="text-ink">Integrates renewables to significantly lower CO₂ emissions.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Create autonomous energy zones</h3>
+                <p class="text-ink">Local energy independence for lighting, charging and small electronics.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Enhance urban spaces</h3>
+                <p class="text-ink">Artistic, inviting design that fosters community engagement.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Efficient, circular and adaptable</h3>
+                <p class="text-ink">Intelligent control minimizes losses; modular/mobile design; option to use recycled components.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave divider -->
+<div class="wave-divider"></div>
+
+<!-- Technology at a Glance -->
+<section class="section bg-mint">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Technology at a Glance</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 bg-leaf rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-4 h-4 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-ink mb-2">Solar panels as "leaves"</h3>
+                            <p class="text-ink">Capture daylight and provide shade/cooling.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 bg-leaf rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-4 h-4 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-ink mb-2">Vertical-axis mini wind turbines</h3>
+                            <p class="text-ink">Work quietly and efficiently at low wind speeds.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 bg-leaf rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-4 h-4 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-ink mb-2">Intelligent controller</h3>
+                            <p class="text-ink">Automates LED schedules (e.g., 19:00–00:00 and 05:00–07:00; seasonal profiles).</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 bg-leaf rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-4 h-4 text-paper" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-ink mb-2">Recycled panels/turbines</h3>
+                            <p class="text-ink">Reduce cost and e-waste while retaining high effectiveness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="{% static 'img/gallery-1.jpg' %}" alt="Technology Overview" class="rounded-2xl shadow-lg w-full h-auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section divider -->
+<div class="section-divider"></div>
+
+<!-- Prototype Gallery -->
+<section class="section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Prototype Gallery</h2>
+            <p class="text-xl text-ink">Visualizing the future of sustainable urban energy</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="group">
+                <div class="overflow-hidden rounded-2xl shadow-lg">
+                    <img src="{% static 'img/hero.jpg' %}" alt="White Rose Prototype 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+            <div class="group">
+                <div class="overflow-hidden rounded-2xl shadow-lg">
+                    <img src="{% static 'img/gallery-1.jpg' %}" alt="White Rose Prototype 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+            <div class="group">
+                <div class="overflow-hidden rounded-2xl shadow-lg">
+                    <img src="{% static 'img/gallery-2.jpg' %}" alt="White Rose Prototype 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Soft transition -->
+<div class="section-soft-transition"></div>
+
+<!-- Use Cases -->
+<section class="section bg-soft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Use Cases</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto">Public parks, residential complexes, city squares/campuses; flexible and relocatable.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-paper rounded-xl p-8 text-center shadow-lg border border-mint">
+                <div class="w-20 h-20 bg-mint rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-ink mb-4">Public Parks</h3>
+                <p class="text-ink">Illuminate pathways and provide charging stations for visitors while enhancing the natural environment.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl p-8 text-center shadow-lg border border-mint">
+                <div class="w-20 h-20 bg-mint rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-ink mb-4">Residential Complexes</h3>
+                <p class="text-ink">Create sustainable community spaces with smart lighting and mobile device charging capabilities.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl p-8 text-center shadow-lg border border-mint">
+                <div class="w-20 h-20 bg-mint rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-ink mb-4">City Squares & Campuses</h3>
+                <p class="text-ink">Transform urban gathering spaces with artistic energy solutions that serve functional and aesthetic purposes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact & Sustainability -->
+<section class="section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Impact & Sustainability</h2>
+                <div class="space-y-4 text-ink">
+                    <p>• Recyclable/low-carbon materials minimize environmental footprint</p>
+                    <p>• Smart energy management reduces waste and optimizes efficiency</p>
+                    <p>• Bird-friendly slow rotation turbines prioritize wildlife safety</p>
+                    <p>• Potential nesting features integrate with local ecosystems</p>
+                    <p>• Complements urban vegetation and green infrastructure</p>
+                </div>
+                <div class="mt-8">
+                    <a href="{% url 'technology' %}" class="btn">Learn More About Our Technology</a>
+                </div>
+            </div>
+            <div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-mint rounded-xl p-6 text-center">
+                        <div class="text-3xl font-bold text-ink mb-2">100%</div>
+                        <div class="text-sm text-teal">Renewable Energy</div>
+                    </div>
+                    <div class="bg-mint rounded-xl p-6 text-center">
+                        <div class="text-3xl font-bold text-ink mb-2">Zero</div>
+                        <div class="text-sm text-teal">Grid Dependency</div>
+                    </div>
+                    <div class="bg-mint rounded-xl p-6 text-center">
+                        <div class="text-3xl font-bold text-ink mb-2">Low</div>
+                        <div class="text-sm text-teal">Maintenance</div>
+                    </div>
+                    <div class="bg-mint rounded-xl p-6 text-center">
+                        <div class="text-3xl font-bold text-ink mb-2">High</div>
+                        <div class="text-sm text-teal">Impact</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners & Supporters -->
+<section class="section bg-gradient-to-r from-leaf to-teal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-paper mb-4">Partners & Supporters</h2>
+            <p class="text-xl text-paper/90 max-w-3xl mx-auto">Collaboration with industry partners (e.g., Lindner) to merge innovation with practical expertise.</p>
+        </div>
+        
+        <!-- Partner logos placeholder -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            <div class="bg-paper rounded-xl p-8 w-full h-24 flex items-center justify-center">
+                <span class="text-ink font-medium">Partner 1</span>
+            </div>
+            <div class="bg-paper rounded-xl p-8 w-full h-24 flex items-center justify-center">
+                <span class="text-ink font-medium">Partner 2</span>
+            </div>
+            <div class="bg-paper rounded-xl p-8 w-full h-24 flex items-center justify-center">
+                <span class="text-ink font-medium">Partner 3</span>
+            </div>
+            <div class="bg-paper rounded-xl p-8 w-full h-24 flex items-center justify-center">
+                <span class="text-ink font-medium">Partner 4</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section bg-soft">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="space-y-6">
+            <div class="bg-paper rounded-xl p-6 shadow-lg border border-mint">
+                <h3 class="text-xl font-semibold text-ink mb-3">How is White Rose powered?</h3>
+                <p class="text-ink">Hybrid solar + wind with smart storage.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl p-6 shadow-lg border border-mint">
+                <h3 class="text-xl font-semibold text-ink mb-3">Is it suitable for cities?</h3>
+                <p class="text-ink">Yes; low-noise VAWTs and compact footprint.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl p-6 shadow-lg border border-mint">
+                <h3 class="text-xl font-semibold text-ink mb-3">What about wildlife?</h3>
+                <p class="text-ink">Slow rotation minimizes bird risk; structure can even provide shelter.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl p-6 shadow-lg border border-mint">
+                <h3 class="text-xl font-semibold text-ink mb-3">Can components be recycled?</h3>
+                <p class="text-ink">Yes; supports reuse of PV panels and turbine parts to cut cost and waste.</p>
+            </div>
+
+            <div class="bg-paper rounded-xl p-6 shadow-lg border border-mint">
+                <h3 class="text-xl font-semibold text-ink mb-3">What's the rollout plan?</h3>
+                <p class="text-ink">Pilot in 12–18 months; monitor/optimize; scale via partnerships.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Teaser -->
+<section class="section bg-leaf">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-paper mb-6">Start to create it with us.</h2>
+        <p class="text-xl text-mint mb-8">Ready to bring sustainable energy solutions to your community?</p>
+        <a href="{% url 'contact' %}" class="btn bg-paper text-leaf hover:bg-soft">Get in Touch</a>
+    </div>
+</section>
+
+{% endblock %}

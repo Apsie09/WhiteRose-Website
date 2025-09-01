@@ -1,0 +1,63 @@
+<nav class="bg-paper shadow-sm border-b border-soft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="{% url 'home' %}" class="flex items-center space-x-3 hover:opacity-80 transition">
+                    <img src="{% load static %}{% static 'img/logo-small.svg' %}" alt="White Rose Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold text-ink">White Rose</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="{% url 'home' %}" class="text-ink hover:text-teal px-3 py-2 text-sm font-medium transition">Home</a>
+                    <a href="{% url 'technology' %}" class="text-ink hover:text-teal px-3 py-2 text-sm font-medium transition">Technology</a>
+                    <a href="{% url 'applications' %}" class="text-ink hover:text-teal px-3 py-2 text-sm font-medium transition">Applications</a>
+                    <a href="{% url 'partners' %}" class="text-ink hover:text-teal px-3 py-2 text-sm font-medium transition">Partners</a>
+                    <a href="{% url 'about' %}" class="text-ink hover:text-teal px-3 py-2 text-sm font-medium transition">About</a>
+                    <a href="{% url 'contact' %}" class="text-ink hover:text-teal px-3 py-2 text-sm font-medium transition">Contact</a>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="/static/docs/White rose resume EN.pdf" target="_blank" class="btn text-sm">
+                    Download Project Resume (PDF)
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-ink hover:text-teal hover:bg-soft focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-soft">
+            <a href="{% url 'home' %}" class="text-ink hover:text-teal block px-3 py-2 text-base font-medium">Home</a>
+            <a href="{% url 'technology' %}" class="text-ink hover:text-teal block px-3 py-2 text-base font-medium">Technology</a>
+            <a href="{% url 'applications' %}" class="text-ink hover:text-teal block px-3 py-2 text-base font-medium">Applications</a>
+            <a href="{% url 'partners' %}" class="text-ink hover:text-teal block px-3 py-2 text-base font-medium">Partners</a>
+            <a href="{% url 'about' %}" class="text-ink hover:text-teal block px-3 py-2 text-base font-medium">About</a>
+            <a href="{% url 'contact' %}" class="text-ink hover:text-teal block px-3 py-2 text-base font-medium">Contact</a>
+            <a href="/static/docs/White rose resume EN.pdf" target="_blank" class="btn text-sm mt-4 ml-3">
+                Download Project Resume (PDF)
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+    document.querySelector('.mobile-menu').classList.toggle('hidden');
+});
+</script>

@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - White Rose — The Energy Tree{% endblock %}
+{% block description %}Get in touch with the White Rose team. Contact us for partnerships, technical questions, or project inquiries. Based at Technical University of Sofia.{% endblock %}
+
+{% block extra_head %}
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out both;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="section bg-soft">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-ink mb-6">Contact Us</h1>
+        <p class="text-xl text-ink leading-relaxed">
+            Ready to bring sustainable energy solutions to your community? We'd love to hear from you. Reach out for partnerships, technical questions, or project inquiries.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Form & Info -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+            <!-- Contact Form -->
+            <div>
+                <div class="bg-paper rounded-2xl shadow-lg p-8 border border-soft">
+                    <h2 class="text-2xl font-bold text-ink mb-6">Send us a message</h2>
+                    
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="mb-6 p-4 rounded-lg bg-mint border border-leaf">
+                                <p class="text-ink">{{ message }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <form method="post" class="space-y-6">
+                        {% csrf_token %}
+                        
+                        <div>
+                            <label for="{{ form.name.id_for_label }}" class="block text-sm font-medium text-ink mb-2">
+                                Name *
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.name.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div>
+                            <label for="{{ form.email.id_for_label }}" class="block text-sm font-medium text-ink mb-2">
+                                Email *
+                            </label>
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.email.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div>
+                            <label for="{{ form.message.id_for_label }}" class="block text-sm font-medium text-ink mb-2">
+                                Message *
+                            </label>
+                            {{ form.message }}
+                            {% if form.message.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.message.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <button type="submit" class="btn w-full justify-center">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="mt-12 lg:mt-0">
+                <div class="space-y-8">
+                    <!-- Team Contacts -->
+                    <div class="bg-mint rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-ink mb-6">Team Contacts</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-leaf rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-ink">Asen Popov</h4>
+                                    <p class="text-ink text-sm">Research & Analysis</p>
+                                    <a href="mailto:asepopov@tu-sofia.bg" class="text-teal hover:text-leaf transition text-sm">asepopov@tu-sofia.bg</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-leaf rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-ink">Melis Mustafa</h4>
+                                    <p class="text-ink text-sm">Documentation & Visualization</p>
+                                    <a href="mailto:mmustafa@tu-sofia.bg" class="text-teal hover:text-leaf transition text-sm">mmustafa@tu-sofia.bg</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-leaf rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-5 h-5 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-ink">Petar Ivanov</h4>
+                                    <p class="text-ink text-sm">Technical Specs & Calculations</p>
+                                    <a href="mailto:petivanov@tu-sofia.bg" class="text-teal hover:text-leaf transition text-sm">petivanov@tu-sofia.bg</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Address -->
+                    <div class="bg-paper rounded-2xl shadow-lg p-8 border border-soft">
+                        <h3 class="text-xl font-bold text-ink mb-4">Our Address</h3>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-mint rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-ink mb-2">Technical University of Sofia</h4>
+                                <p class="text-ink">
+                                    8 Kliment Ohridski Blvd<br>
+                                    1000 Sofia, Bulgaria
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Resources -->
+                    <div class="bg-paper rounded-2xl shadow-lg p-8 border border-soft">
+                        <h3 class="text-xl font-bold text-ink mb-4">Resources</h3>
+                        <div class="space-y-3">
+                            <a href="/static/docs/White rose resume EN.pdf" target="_blank" class="flex items-center text-teal hover:text-leaf transition">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Download Project Resume (PDF)
+                            </a>
+                            <a href="{% url 'technology' %}" class="flex items-center text-teal hover:text-leaf transition">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                                Technical Information
+                            </a>
+                            <a href="{% url 'partners' %}" class="flex items-center text-teal hover:text-leaf transition">
+                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                                Partnership Information
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Response Time -->
+<section class="section bg-gradient-to-r from-leaf to-teal">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-paper mb-6">We're here to help</h2>
+        <p class="text-xl text-paper/90 mb-8">
+            We typically respond to inquiries within 24-48 hours. For urgent matters, please reach out directly to the relevant team member.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-paper mb-2">Partnerships</h3>
+                <p class="text-paper/90 text-sm">Business collaboration and joint ventures</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-paper mb-2">Technical</h3>
+                <p class="text-paper/90 text-sm">Technical specifications and implementation</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-paper mb-2">General</h3>
+                <p class="text-paper/90 text-sm">Questions and general information</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

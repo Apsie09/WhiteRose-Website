@@ -1,0 +1,27 @@
+<!-- Card Component -->
+<div class="bg-paper rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-soft">
+    {% if icon %}
+    <div class="flex items-center justify-center w-12 h-12 bg-mint rounded-lg mb-4">
+        {{ icon|safe }}
+    </div>
+    {% endif %}
+    
+    {% if title %}
+    <h3 class="text-xl font-semibold text-midnight mb-3">{{ title }}</h3>
+    {% endif %}
+    
+    {% if content %}
+    <p class="text-ink leading-relaxed">{{ content }}</p>
+    {% endif %}
+    
+    {% if link_url and link_text %}
+    <div class="mt-4">
+        <a href="{{ link_url }}" class="text-teal hover:text-leaf font-medium transition inline-flex items-center">
+            {{ link_text }}
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </a>
+    </div>
+    {% endif %}
+</div>

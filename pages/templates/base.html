@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}White Rose — The Energy Tree{% endblock %}</title>
+    <meta name="description" content="{% block description %}A cutting-edge, sustainable and socially impactful system that integrates solar 'leaves', vertical-axis wind turbines and smart storage to power lighting, charging and small devices—independent of the grid.{% endblock %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}White Rose — The Energy Tree{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}A cutting-edge, sustainable and socially impactful system that integrates solar 'leaves', vertical-axis wind turbines and smart storage to power lighting, charging and small devices—independent of the grid.{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}https://whiterose.example.com{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://whiterose.example.com/static/img/hero.jpg{% endblock %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{% block twitter_title %}White Rose — The Energy Tree{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}A cutting-edge, sustainable and socially impactful system that integrates solar 'leaves', vertical-axis wind turbines and smart storage to power lighting, charging and small devices—independent of the grid.{% endblock %}">
+    <meta property="twitter:image" content="{% block twitter_image %}https://whiterose.example.com/static/img/hero.jpg{% endblock %}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+    
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="text-ink bg-paper">
+    {% include 'components/navbar.html' %}
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'components/footer.html' %}
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,115 @@
+:root {
+  --mint: #DDF4E7;
+  --leaf: #67C090;
+  --teal: #26667F;
+  --midnight: #124170;
+  --paper: #FFFFFF;
+  --ink: #0B1020;
+  --soft: #EEF3F1;
+}
+
+/* Clean button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: var(--leaf);
+  color: var(--paper);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--teal);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(103, 192, 144, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--teal);
+  color: var(--teal);
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--teal);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* Custom color utilities */
+.bg-mint { background-color: var(--mint); }
+.bg-leaf { background-color: var(--leaf); }
+.bg-teal { background-color: var(--teal); }
+.bg-midnight { background-color: var(--midnight); }
+.bg-paper { background-color: var(--paper); }
+.bg-soft { background-color: var(--soft); }
+
+.text-mint { color: var(--mint); }
+.text-leaf { color: var(--leaf); }
+.text-teal { color: var(--teal); }
+.text-midnight { color: var(--midnight); }
+.text-ink { color: var(--ink); }
+.text-soft { color: var(--soft); }
+
+/* Clean typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Smooth transitions for all links */
+a {
+  transition: all 0.3s ease;
+}
+
+/* Remove all complex dividers and transitions */
+.section-divider,
+.section-soft-transition,
+.wave-divider,
+.fade-in-top,
+.fade-out-bottom {
+  display: none;
+}
+
+/* Custom color utilities */
+.bg-mint { background-color: var(--mint); }
+.bg-leaf { background-color: var(--leaf); }
+.bg-teal { background-color: var(--teal); }
+.bg-midnight { background-color: var(--midnight); }
+.bg-paper { background-color: var(--paper); }
+.bg-soft { background-color: var(--soft); }
+
+.text-mint { color: var(--mint); }
+.text-leaf { color: var(--leaf); }
+.text-teal { color: var(--teal); }
+.text-midnight { color: var(--midnight); }
+.text-ink { color: var(--ink); }
+.text-soft { color: var(--soft); }
+
+.border-mint { border-color: var(--mint); }
+.border-leaf { border-color: var(--leaf); }
+.border-teal { border-color: var(--teal); }
+.border-midnight { border-color: var(--midnight); }

@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+
+{% block title %}Partners - White Rose — The Energy Tree{% endblock %}
+{% block description %}Partner with White Rose for sustainable urban energy solutions. Explore collaboration opportunities with municipalities, construction firms, energy suppliers, and investors through sales, rental, and maintenance models.{% endblock %}
+
+{% block extra_head %}
+<style>
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out both;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="section bg-soft">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-ink mb-6">Partners</h1>
+        <p class="text-xl text-ink leading-relaxed">
+            We collaborate with municipalities, construction firms, energy suppliers, and investors to create value through innovative partnerships. Our flexible business model supports sales, rental, maintenance, and co-branding opportunities that benefit all stakeholders.
+        </p>
+    </div>
+</section>
+
+<!-- Partnership Types -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Partnership Opportunities</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Municipalities -->
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Municipalities</h3>
+                <p class="text-ink text-sm">Smart city initiatives and sustainable urban development projects</p>
+            </div>
+
+            <!-- Construction -->
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Construction Firms</h3>
+                <p class="text-ink text-sm">Integration into new developments and infrastructure projects</p>
+            </div>
+
+            <!-- Energy Suppliers -->
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Energy Suppliers</h3>
+                <p class="text-ink text-sm">Distributed energy solutions and grid independence projects</p>
+            </div>
+
+            <!-- Investors -->
+            <div class="bg-paper rounded-xl shadow-lg p-6 text-center border border-soft">
+                <div class="w-16 h-16 bg-mint rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Investors</h3>
+                <p class="text-ink text-sm">Sustainable technology investments and scalable business opportunities</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Model -->
+<section class="section bg-mint">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Business Model Highlights</h2>
+            <p class="text-xl text-ink max-w-3xl mx-auto">
+                Our flexible approach creates value for all stakeholders through multiple revenue streams and partnership structures.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Sales -->
+            <div class="bg-paper rounded-xl p-6 shadow-lg text-center">
+                <div class="w-12 h-12 bg-leaf rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Direct Sales</h3>
+                <p class="text-ink text-sm">Complete systems for permanent installations with full ownership transfer</p>
+            </div>
+
+            <!-- Rental -->
+            <div class="bg-paper rounded-xl p-6 shadow-lg text-center">
+                <div class="w-12 h-12 bg-leaf rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Rental Programs</h3>
+                <p class="text-ink text-sm">Flexible leasing options for events, temporary installations, and pilot projects</p>
+            </div>
+
+            <!-- Maintenance -->
+            <div class="bg-paper rounded-xl p-6 shadow-lg text-center">
+                <div class="w-12 h-12 bg-leaf rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Maintenance Services</h3>
+                <p class="text-ink text-sm">Comprehensive support packages ensuring optimal performance and longevity</p>
+            </div>
+
+            <!-- Co-branding -->
+            <div class="bg-paper rounded-xl p-6 shadow-lg text-center">
+                <div class="w-12 h-12 bg-leaf rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-ink mb-3">Co-branding</h3>
+                <p class="text-ink text-sm">Joint marketing opportunities showcasing partner commitment to sustainability</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Partners -->
+<section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-6">Our Partners</h2>
+            <p class="text-xl text-ink">Collaboration with industry partners like Lindner to merge innovation with practical expertise</p>
+        </div>
+        
+        <!-- Partner Logos Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
+            <div class="bg-paper rounded-xl shadow-lg p-8 w-full h-32 flex items-center justify-center border border-soft">
+                <span class="text-ink font-medium text-center">Lindner Group</span>
+            </div>
+            <div class="bg-paper rounded-xl shadow-lg p-8 w-full h-32 flex items-center justify-center border border-soft">
+                <span class="text-ink font-medium text-center">Partner 2</span>
+            </div>
+            <div class="bg-paper rounded-xl shadow-lg p-8 w-full h-32 flex items-center justify-center border border-soft">
+                <span class="text-ink font-medium text-center">Partner 3</span>
+            </div>
+            <div class="bg-paper rounded-xl shadow-lg p-8 w-full h-32 flex items-center justify-center border border-soft">
+                <span class="text-ink font-medium text-center">Partner 4</span>
+            </div>
+            <div class="bg-paper rounded-xl shadow-lg p-8 w-full h-32 flex items-center justify-center border border-soft">
+                <span class="text-ink font-medium text-center">Partner 5</span>
+            </div>
+            <div class="bg-paper rounded-xl shadow-lg p-8 w-full h-32 flex items-center justify-center border border-soft">
+                <span class="text-ink font-medium text-center">Partner 6</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Value Co-creation -->
+<section class="section bg-gradient-to-r from-leaf to-teal">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-paper mb-6">Value Co-creation</h2>
+            <p class="text-xl text-paper/90 max-w-3xl mx-auto">
+                Our partnerships are built on mutual value creation, combining our innovative technology with partner expertise to deliver exceptional results for communities and the environment.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-paper mb-3">Shared Innovation</h3>
+                <p class="text-paper/90">Combining technological expertise with practical implementation knowledge</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-paper mb-3">Market Expansion</h3>
+                <p class="text-paper/90">Leveraging partner networks to reach new markets and opportunities</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-leaf rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-paper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-paper mb-3">Sustainable Impact</h3>
+                <p class="text-paper/90">Creating measurable environmental and social benefits together</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section bg-leaf">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-paper mb-6">Ready to partner with us?</h2>
+        <p class="text-xl text-mint mb-8">Join our network of forward-thinking organizations committed to sustainable urban energy solutions</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'contact' %}" class="btn bg-paper text-leaf hover:bg-soft">Start Partnership Discussion</a>
+            <a href="/static/docs/White rose resume EN.pdf" target="_blank" class="btn-outline border-paper text-paper hover:bg-paper hover:text-leaf">Download Partnership Brief</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

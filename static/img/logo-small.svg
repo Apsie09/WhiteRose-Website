@@ -1,0 +1,24 @@
+<!-- Simplified White Rose logo for small spaces -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <g transform="translate(50,50)">
+    <!-- Simplified flower petals -->
+    <g opacity="0.8">
+      <ellipse cx="0" cy="-25" rx="8" ry="18" fill="#4ECDC4" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-25" rx="8" ry="18" fill="#95E1D3" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-25" rx="8" ry="18" fill="#66BB6A" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-25" rx="8" ry="18" fill="#42A5F5" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-25" rx="8" ry="18" fill="#AB47BC" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-25" rx="8" ry="18" fill="#FFA726" transform="rotate(300)"/>
+    </g>
+    
+    <!-- Center -->
+    <circle cx="0" cy="0" r="12" fill="#2E3B4E"/>
+    <circle cx="0" cy="0" r="8" fill="#34495E"/>
+    
+    <!-- Small solar panels around -->
+    <rect x="-30" y="-30" width="5" height="15" fill="#5D4E75" transform="rotate(-30)" rx="1"/>
+    <rect x="25" y="-30" width="5" height="15" fill="#8E7CC3" transform="rotate(30)" rx="1"/>
+    <rect x="25" y="15" width="5" height="15" fill="#5D4E75" transform="rotate(90)" rx="1"/>
+    <rect x="-30" y="15" width="5" height="15" fill="#8E7CC3" transform="rotate(-90)" rx="1"/>
+  </g>
+</svg>
