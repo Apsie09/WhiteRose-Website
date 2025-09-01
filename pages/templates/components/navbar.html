@@ -1,10 +1,11 @@
+{% load static %}
 <nav class="bg-paper shadow-sm border-b border-soft">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="{% url 'home' %}" class="flex items-center space-x-3 hover:opacity-80 transition">
-                    <img src="{% load static %}{% static 'img/logo-small.svg' %}" alt="White Rose Logo" class="h-8 w-8">
+                    <img src="{% static 'img/logo-main.png' %}" alt="White Rose Logo" class="h-8 w-8 object-contain">
                     <span class="text-xl font-bold text-ink">White Rose</span>
                 </a>
             </div>
