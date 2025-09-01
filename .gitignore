@@ -1,6 +1,10 @@
 # Personal instruction files
 DESIGN_MATERIALS_GUIDE.md
 COLOR_IMPROVEMENTS.md
+GITHUB_SETUP.md
+
+# Graphic materials folder (source images, logos, prototypes, team photos)
+graphic_materials/
 
 # Python
 __pycache__/
